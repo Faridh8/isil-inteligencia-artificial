@@ -38,13 +38,13 @@ Para plasmar todo esto en código, vamos a crear la siguiente clase:
 ```C#
 using UnityEngine;
 
-class SBAgent : MonoBehaviour
+public class SBAgent : MonoBehaviour
 {
-    Vector3 velocity = Vector3.zero;
-    Vector3 desired = Vector3.zero;
-    Vector3 steer = Vector3.zero;
-    float maxSpeed = 1.0f;
-    float maxSteer = 1.0f
+    public Vector3 velocity = Vector3.zero;
+    public Vector3 desired = Vector3.zero;
+    public Vector3 steer = Vector3.zero;
+    public float maxSpeed = 1.0f;
+    public float maxSteer = 1.0f
 }
 ```
 
@@ -53,7 +53,7 @@ De modo que si nuestro **NPC** hereda de la clase **SBAgent**, ya podríamos man
 ```C#
 using UnityEngine;
 
-class Npc : SBAgent
+public class Npc : SBAgent
 {
     void Start()
     {
@@ -104,7 +104,7 @@ Para utilizar estos algoritmos con mayor legibilidad y comodidad, crearemos una 
 ```C#
 using UnityEngine;
 
-class SB {
+public class SB {
     static public Vector3 Seek(SBAgent agent, Vector3 targetPosition)
     {
         // calcula el deseado
@@ -138,11 +138,11 @@ Cada algoritmo devolverá una fuerza **steer**, la cual aplicaremos a nuestra ve
 ```C#
 using UnityEngine;
 
-class SBAgent : MonoBehaviour
+public class SBAgent : MonoBehaviour
 {
-    Vector3 velocity = Vector3.zero;
-    float maxSpeed = 1.0f;
-    float maxSteer = 1.0f
+    public Vector3 velocity = Vector3.zero;
+    public float maxSpeed = 1.0f;
+    public float maxSteer = 1.0f
 }
 ```
 

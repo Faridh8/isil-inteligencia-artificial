@@ -24,7 +24,7 @@ Ahora, solo tenemos que agregar nuestro método **Arrive** a la clase **SB** que
 ```C#
 using UnityEngine;
 
-class SB {
+public class SB {
     // ...
     
     static public Vector3 Arrive(SBAgent agent, Vector3 targetPosition, float range)
@@ -60,7 +60,7 @@ Esto lo podemos resolver simplemente acumulando los steers a medida que los nece
 ```C#
 using UnityEngine;
 
-class Npc : SBAgent
+public class Npc : SBAgent
 {
 	Vector3 targetToSeek;
 	Vector3 targetToFlee;
